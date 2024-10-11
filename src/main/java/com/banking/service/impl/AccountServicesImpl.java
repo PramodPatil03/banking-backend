@@ -15,10 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.sql.SQLIntegrityConstraintViolationException;
-import java.util.List;
-import java.util.stream.Collectors;
-
 
 @Service
 @AllArgsConstructor
@@ -33,7 +29,6 @@ public class AccountServicesImpl implements AccountServices {
 
     @Override
     public AccountDto createAccount(AccountDto accountDto){
-            System.out.println("Came here");
             Account account = AccountMapper.mapToAccount(accountDto);
             Account searchedAccount = accountRepository.findUserByEmail(account.getEmail());
             if(searchedAccount !=null) return null;

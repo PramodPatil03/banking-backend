@@ -2,13 +2,13 @@ package com.banking.mapper;
 
 import com.banking.dto.AccountDto;
 import com.banking.entity.Account;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
+// import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.security.crypto.password.PasswordEncoder;
 
 public class AccountMapper {
 
-    @Autowired
-    private static PasswordEncoder passwordEncoder;
+    // @Autowired
+    // private static PasswordEncoder passwordEncoder;
 
     public static AccountDto mapToAccountDto(Account account){
         return new AccountDto(

@@ -9,12 +9,10 @@ import com.banking.service.AccountServices;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @AllArgsConstructor
 @CrossOrigin
@@ -25,9 +23,6 @@ public class AccountController {
 
     @Autowired
     private AccountServices accountServices;
-    private AccountDto accountDto;
-    private long acNumber;
-    private long amount;
 
     @PostMapping("/create")
     public ResponseEntity<AccountDto> createAccount(@RequestBody AccountDto accountDto){
